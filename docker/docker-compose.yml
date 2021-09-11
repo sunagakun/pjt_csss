@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+    csss-web:
+        container_name: csss-web
+        depends_on:
+            - csss-db
+        image: wordpress:latest
+        volumes:
+            - ../wp:/var/www/html
+        ports:
+            - "8000:80"
+        restart: always
+        environment:
+            CSSS_DB_HOST: csss-db:3306
+            CSSS_DB_USER: admin
+            CSSS_DB_PASSWORD: admin
+
+
+    csss-db:
+        platform: linux/x86_64
+        container_name: csss-db
+        image: mysql:5.7
+        volumes:
+            - db_data:/var/lib/mysql
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: admin
+            MYSQL_DATABASE: csss_db
+            MYSQL_USER: admin
+            MYSQL_PASSWORD: admin
+volumes:
+    db_data:
