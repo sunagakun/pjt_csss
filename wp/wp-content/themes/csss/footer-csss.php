@@ -1,3 +1,3 @@
-<footer>
-    <p style="text-align: center;">© CSSS Blog.</p>
-<footer>
+<footer class="footer-area">
+    <p class="text-center">© CSSS Blog.</p>
+</footer>
