@@ -46,14 +46,22 @@
             <li class="breadcrumb-item active" aria-current="page"><?php the_title() ?></li>
         </ol>
     </nav>
-    <?php if(have_posts()): while(have_posts()):the_post(); ?>
-        <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-        <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-        <p><?php the_category(', '); ?></p>
-        <p><?php the_content('Read more'); ?></p>
-    <?php endwhile; endif; ?>
-    <?php previous_post_link('%link','古い記事へ'); ?>
-    <?php next_post_link('%link','新しい記事へ'); ?>
+    <div class="row">
+      <div class="col-8">
+        <?php if(have_posts()): while(have_posts()):the_post(); ?>
+            <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+            <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+            <p><?php the_category(', '); ?></p>
+            <p><?php the_content('Read more'); ?></p>
+        <?php endwhile; endif; ?>
+        <?php previous_post_link('%link','古い記事へ'); ?>
+        <?php next_post_link('%link','新しい記事へ'); ?>
+      </div>
+      <div class="col-4">
+        <!-- サイドバー -->
+        <?php get_sidebar(); ?>
+      </div>
+    </div>
 <script src="/wp-content/themes/csss/common/bootstrap/js/bootstrap.js"></script>
 <script src="/wp-content/themes/csss/common/bootstrap/js/bootstrap.min.js"></script>
 </body>

@@ -73,7 +73,7 @@
     <?php
         $args = array(
           'posts_per_page' => 3,
-          'post_type'=> 'sng'
+          'post_type'=> 'portfolio'
         );
         $myposts = get_posts( $args );
         foreach ( $myposts as $post ) : setup_postdata( $post );
