@@ -12,7 +12,7 @@
     <?php get_header('csss'); ?>
     <!-- include header -->
 </head>
-<body class="container">
+<body>
     <!-- メインビジュアルエリア -->
     <div id="carouselMainImg" class="carousel slide" data-bs-ride="carousel" style="background-color: #f5deb3;">
       <ol class="carousel-indicators">
@@ -40,62 +40,130 @@
         <span class="visually-hidden">Next</span>
       </a>
     </div>
+    <div class="container">
+    <!-- プロフィールエリア -->
+    <div class="mt-4" style="height: 200px; weight: 100px; background-color: grey">
+      <p>プロフィールエリア保留（これむずいかも）</p>
+    </div>
+
+    <!-- スキルエリア -->
+    <div class="m-5"><h3>Skills</h3></div>
+    <div class="row justify-content-around">
+      <div class="col-sm-2">
+      <div class="card">
+        <img src="/wp-content/themes/csss/common/img/flutter.png" class="card-img-top" alt="...">
+        <div class="card-header">
+          Flutter
+        </div>
+      </div>
+      </div>
+      <div class="col-sm-2">
+      <div class="card">
+        <img src="/wp-content/themes/csss/common/img/flutter.png" class="card-img-top" alt="...">
+        <div class="card-header">
+          Flutter
+        </div>
+      </div>
+      </div>
+      <div class="col-sm-2">
+      <div class="card">
+        <img src="/wp-content/themes/csss/common/img/flutter.png" class="card-img-top" alt="...">
+        <div class="card-header">
+          Flutter
+        </div>
+      </div>
+      </div>
+      <div class="col-sm-2">
+      <div class="card">
+        <img src="/wp-content/themes/csss/common/img/flutter.png" class="card-img-top" alt="...">
+        <div class="card-header">
+          Flutter
+        </div>
+      </div>
+      </div>
+      <div class="col-sm-2">
+      <div class="card">
+        <img src="/wp-content/themes/csss/common/img/flutter.png" class="card-img-top" alt="...">
+        <div class="card-header">
+          Flutter
+        </div>
+      </div>
+      </div>
+    </div>
+</div>
+    <!-- ポートフォリオエリア -->
+    <div class="bg-work my-5">
+      <div class="py-5">
+        <h3 class="text-center font-white">Works</h3>
+        <div class="container">
+          <div class="row justify-content-around py-4">
+          <?php
+              $args = array(
+                'posts_per_page' => 6,
+                'post_type'=> 'portfolio'
+              );
+              $myposts = get_posts( $args );
+              foreach ( $myposts as $post ) : setup_postdata( $post );
+          ?>
+                <div class="col-sm-4">
+                  <div class="card border-secondary">
+                  <div class="card-header text-center">
+                      <img src="/wp-content/themes/csss/common/img/friends_alubm.png" class="card-img-top card-img" alt="...">
+                  </div>
+                  <div class="card-body">
+                      <h5 class="card-title"><?php the_title() ?></h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                  </div>
+                </div>
+          <?php
+              endforeach;
+              wp_reset_postdata();
+          ?>
+          </div>
+        </div>
+        <div class="text-center pt-4">
+          <span class="border-btn px-5 py-3" style="background-color: white;">製作実績一覧へ ▶︎</span>
+        </div>
+      </div>
+    </div>
+
+<div class="container">
     <!-- ブログ一覧エリア -->
-    <h3 class="text-center div-area">ブログコンテンツ</h3>
-    <div class="row row-cols-3 row-cols-md-3 g-4">
+    <div class="m-5"><h3>Blog</h3></div>
+    <div class="row justify-content-around">
     <?php
         $args = array(
-          'posts_per_page' => 3,
+          'posts_per_page' => 9,
           'post_type'=> 'sng'
         );
         $myposts = get_posts( $args );
         foreach ( $myposts as $post ) : setup_postdata( $post );
     ?>
-          <div class="col">
-            <a href="<?php the_permalink(); ?>">
-            <div class="card border-secondary">
-                <div class="card-header"><?php the_title() ?></div>
-              <div class="card-body">
-                <p class="card-text">これはテスト投稿の記事です。</p>
-              </div>
-            </div>
-            </a>
-          </div>
-    <?php
-        endforeach;
-        wp_reset_postdata();
-    ?>
-    </div>
-
-    <!-- ポートフォリオエリア -->
-    <h3 class="text-center div-area">ポートフォリオ</h3>
-    <div class="row row-cols-3 row-cols-md-3 g-4">
-    <?php
-        $args = array(
-          'posts_per_page' => 3,
-          'post_type'=> 'portfolio'
-        );
-        $myposts = get_posts( $args );
-        foreach ( $myposts as $post ) : setup_postdata( $post );
-    ?>
-          <div class="col">
-            <div class="card border-secondary" style="backgroud-color: red;">
+      <div class="col-sm-4 mb-5">
+        <a href="<?php the_permalink(); ?>">
+          <div class="card border-secondary">
             <div class="card-header text-center">
-                <img src="/wp-content/themes/csss/common/img/friends_alubm.png" class="card-img-top card-img" alt="...">
+                <img src="/wp-content/themes/csss/common/img/flutter.png" class="card-img-top card-img" alt="...">
             </div>
+              <div class="card-header"><?php the_title() ?></div>
             <div class="card-body">
-                <h5 class="card-title"><?php the_title() ?></h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
+              <p class="card-text"><?php the_time('Y.m.d'); ?></p>
             </div>
           </div>
+        </a>
+      </div>
     <?php
         endforeach;
         wp_reset_postdata();
     ?>
     </div>
-<script src="/wp-content/themes/csss/common/bootstrap/js/bootstrap.js"></script>
-<script src="/wp-content/themes/csss/common/bootstrap/js/bootstrap.min.js"></script>
+    <div class="text-center mb-5">
+      <span class="border-btn px-5 py-3">記事一覧へ ▶︎</span>
+    </div>
+    <script src="/wp-content/themes/csss/common/bootstrap/js/bootstrap.js"></script>
+    <script src="/wp-content/themes/csss/common/bootstrap/js/bootstrap.min.js"></script>
+  </div>
 </body>
     <?php get_footer('csss'); ?>
 </html>
