@@ -105,7 +105,7 @@
               $myposts = get_posts( $args );
               foreach ( $myposts as $post ) : setup_postdata( $post );
           ?>
-                <div class="col-sm-4">
+                <div class="col-sm-4 mb-5">
                   <div class="card border-secondary">
                   <div class="card-header text-center">
                       <img src="/wp-content/themes/csss/common/img/friends_alubm.png" class="card-img-top card-img" alt="...">
