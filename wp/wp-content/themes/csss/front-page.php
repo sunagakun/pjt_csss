@@ -42,9 +42,10 @@
     </div>
     <div class="container">
     <!-- プロフィールエリア -->
-    <div class="mt-4" style="height: 200px; weight: 100px; background-color: grey">
-      <p>プロフィールエリア保留（これむずいかも）</p>
-    </div>
+    <!-- <div class="mt-4 d-flex align-items-center justify-content-center" style="height: 200px; weight: 100px; background-color: grey">
+      <p style="font-size: 150%;">実装中</p>
+    </div> -->
+    <p class="text-center mt-4">プロフィールエリアは実装中</p>
 
     <!-- スキルエリア -->
     <div class="m-5"><h3>Skills</h3></div>
@@ -59,33 +60,33 @@
       </div>
       <div class="col-sm-2">
       <div class="card">
-        <img src="/wp-content/themes/csss/common/img/flutter.png" class="card-img-top" alt="...">
+        <img src="/wp-content/themes/csss/common/img/php.jpg" class="card-img-top" alt="...">
         <div class="card-header">
-          Flutter
+          PHP
         </div>
       </div>
       </div>
       <div class="col-sm-2">
       <div class="card">
-        <img src="/wp-content/themes/csss/common/img/flutter.png" class="card-img-top" alt="...">
+        <img src="/wp-content/themes/csss/common/img/kotlin.png" class="card-img-top" alt="...">
         <div class="card-header">
-          Flutter
+          kotlin
         </div>
       </div>
       </div>
       <div class="col-sm-2">
       <div class="card">
-        <img src="/wp-content/themes/csss/common/img/flutter.png" class="card-img-top" alt="...">
+        <img src="/wp-content/themes/csss/common/img/laravel.png" class="card-img-top" alt="...">
         <div class="card-header">
-          Flutter
+          Laravel
         </div>
       </div>
       </div>
       <div class="col-sm-2">
       <div class="card">
-        <img src="/wp-content/themes/csss/common/img/flutter.png" class="card-img-top" alt="...">
+        <img src="/wp-content/themes/csss/common/img/docker.jpg" class="card-img-top" alt="...">
         <div class="card-header">
-          Flutter
+          Docker
         </div>
       </div>
       </div>
@@ -123,7 +124,9 @@
           </div>
         </div>
         <div class="text-center pt-4">
-          <span class="border-btn px-5 py-3" style="background-color: white;">製作実績一覧へ ▶︎</span>
+          <a href="<?php echo get_post_type_archive_link( 'portfolio' ); ?>">
+            <span class="border-btn px-5 py-3" style="background-color: white;">製作実績一覧へ ▶︎</span>
+          </a>
         </div>
       </div>
     </div>
@@ -159,7 +162,9 @@
     ?>
     </div>
     <div class="text-center mb-5">
-      <span class="border-btn px-5 py-3">記事一覧へ ▶︎</span>
+      <a href="<?php echo get_post_type_archive_link( 'sng' ); ?>">
+        <span class="border-btn px-5 py-3">記事一覧へ ▶︎</span>
+      </a>
     </div>
     <script src="/wp-content/themes/csss/common/bootstrap/js/bootstrap.js"></script>
     <script src="/wp-content/themes/csss/common/bootstrap/js/bootstrap.min.js"></script>
