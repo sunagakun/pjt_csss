@@ -22,13 +22,13 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="/wp-content/themes/csss/common/img/friends_alubm.png" class="d-block w-100 img-main" alt="...">
+          <img src="/wp-content/themes/csss/common/img/screen_shot1.png" class="d-block w-100 img-main" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="/wp-content/themes/csss/common/img/friends_alubm.png" class="d-block w-100 img-main" alt="...">
+          <img src="/wp-content/themes/csss/common/img/screen_shot2.png" class="d-block w-100 img-main" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="/wp-content/themes/csss/common/img/friends_alubm.png" class="d-block w-100 img-main" alt="...">
+          <img src="/wp-content/themes/csss/common/img/screen_shot3.png" class="d-block w-100 img-main" alt="...">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselMainImg" role="button" data-bs-slide="prev">
@@ -45,8 +45,32 @@
     <!-- <div class="mt-4 d-flex align-items-center justify-content-center" style="height: 200px; weight: 100px; background-color: grey">
       <p style="font-size: 150%;">実装中</p>
     </div> -->
-    <p class="text-center mt-4">プロフィールエリアは実装中</p>
-
+    <!-- <img src="/wp-content/themes/csss/common/img/profile.jpeg" style="height: 100px; width: 100px;"> -->
+    <div class="m-5"><h3>Profile</h3></div>
+    <div class="card mb-3 mx-auto border-secondary" style="max-width: 70%;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img class="bd-placeholder-img" width="100%" height="250" src="/wp-content/themes/csss/common/img/profile.jpeg"></img>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">須長 秀太</h5>
+            <経歴>
+            <p class="card-text">
+              日本工学院八王子専門学校情報処理科卒<br>
+              渋谷でバックエンドエンジニア
+            </p>
+            <好きなもの>
+            <p class="card-text">
+              ずっと真夜中でいいのに。 / ポーカー / 麻雀 / ポケモン
+            </p>
+            <a href="/about">
+              <p class="card-text" style="text-align: right;"><small>>詳細はこちら</small></p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- スキルエリア -->
     <div class="m-5"><h3>Skills</h3></div>
     <div class="row justify-content-around">
@@ -107,6 +131,7 @@
               foreach ( $myposts as $post ) : setup_postdata( $post );
           ?>
                 <div class="col-sm-4 mb-5">
+                <a href="<?php the_permalink(); ?>">
                   <div class="card border-secondary">
                   <div class="card-header text-center">
                       <img src="/wp-content/themes/csss/common/img/friends_alubm.png" class="card-img-top card-img" alt="...">
@@ -116,6 +141,7 @@
                       <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   </div>
                   </div>
+                </a>
                 </div>
           <?php
               endforeach;

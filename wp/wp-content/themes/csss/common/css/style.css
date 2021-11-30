@@ -28,6 +28,11 @@ body{
 a {
     text-decoration: none;
     color: black;
+    transition: color 0.3s;
+}
+
+a:hover{
+    color: #196095;
 }
 
 .blog-margin{
@@ -54,4 +59,8 @@ a {
     border: solid 2px;
     border-color: #EFA667;
     display: inline-block;
+}
+
+.text-padding {
+    line-height: 200%;
 }
