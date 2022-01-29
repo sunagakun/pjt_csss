@@ -1,5 +1,8 @@
 body{
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .img-main {
@@ -21,8 +24,7 @@ body{
 }
 
 .footer-area {
-    margin-top: 20px;
-    bottom: 0; /*下に固定*/
+    margin-top: auto;
 }
 
 a {
@@ -63,4 +65,60 @@ a:hover{
 
 .text-padding {
     line-height: 200%;
+}
+
+.timeline {
+    width: 96%;
+    max-width: 940px;
+    margin: 28px auto;
+}
+
+.timeline-list {
+    padding: 40px 0;
+}
+
+.timeline-list-item {
+    display: flex;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.timeline-list-item .date {
+    width: 20%;
+    padding: 0 0 0 20px;
+    color: #888888;
+    font-weight: bold;
+}
+
+.timeline-list-item .content {
+    position: relative;
+    width: 80%;
+    padding: 0 20px 60px 30px;
+    border-left: 1px solid #418EAC;
+}
+
+.timeline-list-item .content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #196095;
+    border-radius: 10px;
+}
+
+.sidebar-section {
+    background-color: #418EAC;
+}
+
+.sidebar-section-font {
+    color: white;
+    font-size: medium;
+}
+
+.blog-header {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
 }

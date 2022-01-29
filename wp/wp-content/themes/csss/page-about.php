@@ -120,11 +120,65 @@ Template Name: About
 
     <!-- Career -->
     <div class="m-5"><span><h3><u style="text-decoration-color: #EFA667; text-decoration-thickness: 5px;">Career</u></h3></span></div>
-    <p class="text-center text-muted">準備中</p>
+    <div class="timeline">
+    <ul class="timeline-list">
+        <li class="timeline-list-item">
+            <div class="date">2000年03月</div>
+            <div class="content text-secondary">埼玉県川越市で生まれる。育ちは東松山市。</div>
+        </li>
+        <li class="timeline-list-item">
+            <div class="date">2010年01月</div>
+            <div class="content text-secondary">ポケモンWCS2010 日本代表決定戦 16位</div>
+        </li>
+        <li class="timeline-list-item">
+            <div class="date">2020年03月</div>
+            <div class="content text-secondary">日本工学院八王子専門学校 モバイルアプリケーション開発コース 卒業</div>
+        </li>
+        <li class="timeline-list-item">
+            <div class="date">2020年04月</div>
+            <div class="content text-secondary">新卒入社（バックエンドエンジニア）</div>
+        </li>
+        <li class="timeline-list-item">
+            <div class="date">現在</div>
+            <div class="content text-secondary">Laravelに悪戦苦闘中</div>
+        </li>
+    </ul>
+</div>
 
-    <!-- SNS -->
+  <!-- SNS -->
     <div class="m-5"><span><h3><u style="text-decoration-color: #EFA667; text-decoration-thickness: 5px;">SNS</u></h3></span></div>
-    <p class="text-center text-muted">準備中</p>
+    <div class="row justify-content-around mb-3">
+      <div class="col-sm-3 mt-2">
+        <a href="https://www.instagram.com/sunaga_fatman/" target="_blank">
+            <div class="card">
+              <img src="/wp-content/themes/csss/common/img/instagram.png" class="card-img-top" alt="instagram">
+              <div class="card-header">
+                Instagram
+              </div>
+            </div>
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a href="https://qiita.com/sunagakuuun" target="_blank">
+            <div class="card mt-2">
+              <img src="/wp-content/themes/csss/common/img/qiita.jpeg" class="card-img-top" alt="qiita">
+              <div class="card-header">
+                Qiita
+              </div>
+            </div>
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a href="https://linkedin.com/in/shuta-sunaga/" target="_blank">
+            <div class="card mt-2">
+              <img src="/wp-content/themes/csss/common/img/linkedin.jpeg" class="card-img-top" alt="linkedin">
+              <div class="card-header">
+                linkedin
+              </div>
+            </div>
+        </a>
+      </div>
+    </div>
 </div>
     <script src="/wp-content/themes/csss/common/bootstrap/js/bootstrap.js"></script>
     <script src="/wp-content/themes/csss/common/bootstrap/js/bootstrap.min.js"></script>

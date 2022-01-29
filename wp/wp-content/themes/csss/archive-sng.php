@@ -54,9 +54,6 @@
             wp_reset_postdata();
         ?>
         </div>
-        <div class="text-center mb-5">
-          <span class="border-btn px-5 py-3">記事一覧へ ▶︎</span>
-        </div>
         <script src="/wp-content/themes/csss/common/bootstrap/js/bootstrap.js"></script>
         <script src="/wp-content/themes/csss/common/bootstrap/js/bootstrap.min.js"></script>
       </div>

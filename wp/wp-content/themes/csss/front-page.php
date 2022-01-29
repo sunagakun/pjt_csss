@@ -119,7 +119,7 @@
     <!-- ポートフォリオエリア -->
     <div class="bg-work my-5">
       <div class="py-5">
-        <h3 class="text-center font-white">Works</h3>
+        <h3 class="text-center font-white" id="works">Works</h3>
         <div class="container">
           <div class="row justify-content-around py-4">
           <?php
@@ -138,7 +138,7 @@
                   </div>
                   <div class="card-body">
                       <h5 class="card-title"><?php the_title() ?></h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text"><?php echo SCF::get('description_app'); ?></p>
                   </div>
                   </div>
                 </a>
@@ -149,11 +149,11 @@
           ?>
           </div>
         </div>
-        <div class="text-center pt-4">
+        <!-- <div class="text-center pt-4">
           <a href="<?php echo get_post_type_archive_link( 'portfolio' ); ?>">
             <span class="border-btn px-5 py-3" style="background-color: white;">製作実績一覧へ ▶︎</span>
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -196,5 +196,5 @@
     <script src="/wp-content/themes/csss/common/bootstrap/js/bootstrap.min.js"></script>
   </div>
 </body>
-    <?php get_footer('csss'); ?>
+<?php get_footer('csss'); ?>
 </html>

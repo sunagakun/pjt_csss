@@ -1,25 +1,29 @@
-<h3 class="text-center blog-padding">最新記事</h3>
-
-<ul class="list-group">
+<div class="sidebar-section">
+    <h4 class="text-center blog-padding sidebar-section-font pt-2 pb-2">最新記事</h4>
+</div>
+<div class="m-5">
     <?php
         $args = array(
-          'posts_per_page' => 5,
+          'posts_per_page' => 3,
           'post_type'=> 'sng'
         );
         $myposts = get_posts( $args );
         foreach ( $myposts as $post ) : setup_postdata( $post );
     ?>
     <a href="<?php the_permalink(); ?>">
-        <li class="list-group-item"><?php the_title() ?></li>
+        <div class="card mt-2">
+            <img src="/wp-content/themes/csss/common/img/linkedin.jpeg" class="blog-header" alt="...">
+            <div class="card-header">
+            <?php the_title() ?>
+            </div>
+        </div>
     </a>
 
     <?php
         endforeach;
         wp_reset_postdata();
     ?>
-    <a href="/" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">記事一覧へ</a>
-</ul>
-
+</div>
 <div class="text-center" style="padding-top: 30px;">
     <script type="text/javascript">var a8='a21092053986_3HKR5L_AY4Z8Y_2HOM_BUB81';var rankParam='JiaDpEz7ShZwWdKpS6Z0egZIUhZIA';var bannerType='0';var bannerKind='item.fix.kind7';var frame='1';var ranking='1';var category='総合';</script><script type="text/javascript" src="//rws.a8.net/rakuten/ranking.js"></script>
 </div>
